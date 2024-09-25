@@ -10,7 +10,7 @@
       <div class="main">
             <h1>ПИСМО ДО БЪДЕЩЕТО</h1>
             <h3>Ако си стигнала до тук по-рано от 22.08.2025, вече знам. Съветвам те да спреш до тук.</h3>
-            <form action="">
+            <form action="javascript:void(0);">
                   <label for="first">
                         Username:
                   </label>
@@ -28,7 +28,7 @@
                          placeholder="Enter your Password" required>
 
                   <div class="wrap">
-                        <button type="submit" onclick="window.location.href='link.html'; ">
+                        <button type="submit" onclick="clearFieldsAndRedirect();">
                               Напред
                         </button>
                   </div>
@@ -40,6 +40,17 @@
                   </a>
             </p>
       </div>
+
+      <script>
+            function clearFieldsAndRedirect() {
+                  // Clear the input fields
+                  document.getElementById("first").value = "";
+                  document.getElementById("password").value = "";
+
+                  // Redirect to the next page
+                  window.location.href = 'link.html';
+            }
+      </script>
 </body>
 
 </html>
